@@ -18,6 +18,7 @@
     white-space: pre-wrap;
     list-style: none;
     padding-bottom: 5rem;
+    color: gray;
 }
 .longDesText::first-line{
     text-transform: uppercase;
@@ -46,9 +47,7 @@
 color: black;
 padding: 0.5rem 0;
 }
-.ftPrice{
 
-}
 .ftImg{
     width: 15rem;
     height: 17rem;

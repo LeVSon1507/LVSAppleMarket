@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 
 import { URL } from "../../URL";
@@ -11,8 +12,10 @@ import Footer from "../../components/Footer/Footer";
 import DetailIntroduce from "../../components/DetailIntroduce/DetailIntroduce";
 import ProductList from "../../components/ProductList/ProductList";
 import { Loading } from "../../components/Loading/Loading";
+import { addToCart } from "../../redux/action/action";
 
 function DetailPage() {
+    const dispatch = useDispatch()
     const { id } = useParams();
     const { data, isLoading } = useFetch(URL);
     const [quantity, setQuantity] = useState(1);
@@ -25,11 +28,23 @@ function DetailPage() {
     const handleIncrease = () => {
         setQuantity(quantity + 1);
     };
-    const addToCart = () => {
 
-    }
     const dataProductDetail = data.filter(product => product._id.$oid === id)
     const dataRelated = data.filter(product => product?.category === dataProductDetail[0]?.category)
+    const [cartAdded, setCartAdded] = useState(false);
+    const handleAddToCart = (product) => {
+        const dataProductNew = {
+            ...product,
+            quantity: quantity
+        }
+        setCartAdded(true);
+        setTimeout(() => {
+            setCartAdded(false);
+        }, 1000);
+        dispatch(addToCart(dataProductNew))
+    }
+
+
 
     return (
         isLoading ?
@@ -39,14 +54,15 @@ function DetailPage() {
             <>
                 <div className="shopPageContainer">
                     <div className="shopPageContent">
-                        <NavBar />
+                        <NavBar cartAdded={cartAdded} />
                         {/* detail header */}
                         <DetailIntroduce
                             dataProductDetail={dataProductDetail}
                             handleDecrease={handleDecrease}
                             handleIncrease={handleIncrease}
-                            addToCart={addToCart}
+                            addToCart={handleAddToCart}
                             quantity={quantity}
+                            cartAdded={cartAdded}
                         />
                         {/* detail description */}
                         <button className="description">DESCRIPTION</button>

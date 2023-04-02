@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './DetailIntroduce.css';
 
 
-function DetailIntroduce({ addToCart, handleIncrease, handleDecrease, dataProductDetail, quantity }) {
+function DetailIntroduce({ addToCart, handleIncrease, handleDecrease, dataProductDetail, quantity, cartAdded }) {
     return (<div className="detailContainer">
         <div className="container-fluid row">
             {/* 4 img */}
@@ -23,7 +23,7 @@ function DetailIntroduce({ addToCart, handleIncrease, handleDecrease, dataProduc
             <div className="imgGr col-md-5">
                 {/* introducer */}
                 <h1>{dataProductDetail[0]?.name}</h1>
-                <p className='priceDetail'> {parseInt(dataProductDetail[0]?.price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</p>
+                <p className='priceDetail'> {parseInt(dataProductDetail[0]?.price).toLocaleString('vi-VN')} VND</p>
                 <p>{dataProductDetail[0]?.short_desc}</p>
                 <p className="category"><h5>CATEGORY:</h5> {dataProductDetail[0]?.category}</p>
                 <div className="wrapQuanAndBtnGr">
@@ -40,7 +40,7 @@ function DetailIntroduce({ addToCart, handleIncrease, handleDecrease, dataProduc
                             </span>
                         </div>
                     </div>
-                    <button className="addToCart" onClick={addToCart}>Add To Cart</button>
+                    <button className={`addToCart ${cartAdded ? "added" : ""}`} onClick={() => addToCart(dataProductDetail[0])}>{cartAdded ? "Added to Cart!" : "Add To Cart"}</button>
                 </div>
             </div>
         </div>

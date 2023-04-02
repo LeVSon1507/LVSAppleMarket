@@ -14,7 +14,7 @@ import { Loading } from "../Loading/Loading";
 function ProductList({ category, isShopPage, searchValue }) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const isShow = useSelector(state => state.showPopupReducer.isShowPopup);
+    const isShow = useSelector(state => state.popupReducer.isShowPopup);
     const { data, isLoading } = useFetch(URL);
     const showProductDetail = (product) => {
         dispatch(showPopup(product));
@@ -32,7 +32,9 @@ function ProductList({ category, isShopPage, searchValue }) {
                 <img src={product.img1} alt="productImg" className="productImg"
                     onClick={isShopPage ? () => gotoDetailPage(product) : () => showProductDetail(product)} />
                 <p className="productName">{product.name}</p>
-                <p className="productPrice">{parseInt(product.price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</p>
+                <p className="productPrice">
+                    {parseInt(product?.price).toLocaleString('vi-VN')} VND
+                </p>
             </div>
         ), [product]);
 

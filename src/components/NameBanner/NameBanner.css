@@ -17,3 +17,9 @@
     color: #d3d3d3;
     cursor: pointer;
  }
+ .checkOutPath{
+   text-transform: uppercase;
+   font-style: italic;
+   color: black;
+   cursor: pointer;
+ }

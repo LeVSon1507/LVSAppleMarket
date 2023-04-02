@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
 
-import { showPopupReducer } from "./reducer";
+import { authReducer, popupReducer, cartReducer } from "./reducer";
 
 export const allReducers = combineReducers({
-    showPopupReducer,
+    authReducer,
+    popupReducer,
+    cartReducer
     // add more reducers here
 });
+
+
