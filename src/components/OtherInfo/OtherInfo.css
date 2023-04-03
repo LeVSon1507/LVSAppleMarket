@@ -18,7 +18,7 @@ h5 {
 }
 .row2Custom {
    display: flex;
-   padding: 3rem 0rem;
+   padding: 3rem 0.2rem;
    justify-content: space-between;
    align-items: center;
 }
@@ -34,6 +34,7 @@ h5 {
    padding: 1rem 14rem 1rem 0;
    display: flex;
    text-indent: 3px;
+   border: #d3d3d3 1px solid;
 }
 
 .subscribe {
@@ -47,5 +48,18 @@ h5 {
         display: flex;
         text-indent: 3px;
      }
+     .row1Custom {
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+   margin: 0 auto;
+   padding: 0;
+   }
+   .row2Custom {
+      display: flex;
+      padding: 3rem 0rem;
+      justify-content: space-between;
+      align-items: center;
+   }
      
 }

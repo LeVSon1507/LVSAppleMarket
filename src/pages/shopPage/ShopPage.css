@@ -9,12 +9,16 @@ body {
    overflow-x: hidden;
 }
 
-.shopPageContainer {
-}
-
 .shopPageContent {
    width: 70%;
    margin: 0 auto;
 }
 
 
+@media screen and (max-width:768px) {
+   .shopPageContent{
+       width: 100%;
+       margin: 0;
+   }
+   
+}

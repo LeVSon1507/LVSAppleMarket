@@ -80,11 +80,11 @@ function ShopCategories() {
                   </li>
                </ul>
             </div>
-            <div className='categoriesProduct col-md-8 '>
+            <div className='categoriesProduct col-md-8'>
                <div className='headerProductCate'>
                   <input
                      type='text'
-                     className='searchProductIp'
+                     className='searchProductIp '
                      placeholder='Enter Search Here!'
                      onChange={e => handleSearch(e)}
                   />

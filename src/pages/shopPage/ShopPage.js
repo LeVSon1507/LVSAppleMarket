@@ -6,6 +6,7 @@ import './ShopPage.css'
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import ShopCategories from "../../components/ShopCategories/ShopCategories";
+import Livechat from "../../components/Livechat/Livechat";
 
 
 function ShopPage() {
@@ -16,6 +17,7 @@ function ShopPage() {
                 <ShopCategories />
             </div>
             <Footer />
+            <Livechat />
         </div>
     );
 }

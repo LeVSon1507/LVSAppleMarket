@@ -8,9 +8,8 @@
 }
 .mImg{
     object-fit: cover;
-    width: 28rem;
-    height: 32rem;
-    padding-right: 3rem;
+    width: 100%;
+    height: 100%;
 }
 .imgGr>img{
     object-fit: cover;
@@ -85,3 +84,23 @@
       transform: scale(1);
     }
   }
+
+
+  @media screen and (max-width:768px) {
+    .detailContainer{
+        width: 100%;
+    }
+    .imgGr{
+        padding-bottom: 10px;
+    }
+    .imgGr>img{
+        width: 147px;
+        height: 147px;
+        float: right;
+        min-width: fit-content;
+    }
+    .mainImg>img{
+        float: left;
+    }
+    
+}

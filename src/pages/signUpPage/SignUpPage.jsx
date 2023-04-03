@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 import './SignUpPage.css';
+import Livechat from '../../components/Livechat/Livechat';
 
 function SignUpPage() {
    const userArr = JSON.parse(localStorage.getItem('userArr') || '[]');
@@ -120,6 +121,7 @@ function SignUpPage() {
             </div>
          </div>
          <Footer />
+         <Livechat />
       </div>
    );
 }

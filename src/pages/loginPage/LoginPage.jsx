@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 import { onLogin } from '../../redux/action/action';
 import './LoginPage.css';
+import Livechat from '../../components/Livechat/Livechat';
 
 function LoginPage() {
    const dispatch = useDispatch();
@@ -93,6 +94,7 @@ function LoginPage() {
             </div>
          </div>
          <Footer />
+         <Livechat />
       </div>
    );
 }

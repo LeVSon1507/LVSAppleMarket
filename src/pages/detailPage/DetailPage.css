@@ -52,3 +52,11 @@ padding: 0.5rem 0;
     width: 15rem;
     height: 17rem;
 }
+
+@media screen and (max-width:768px) {
+    .shopPageContent{
+        width: 100%;
+        padding: 1rem;
+    }
+    
+}

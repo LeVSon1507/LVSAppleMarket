@@ -19,7 +19,7 @@ const Popup = () => {
     };
 
     return (
-        <div className='container'>
+        <div className='container-fluid'>
             <div className='popup'>
                 <div className='popup-content'>
                     <img src={popupData?.img1} alt='popupImg' className='productImg' />

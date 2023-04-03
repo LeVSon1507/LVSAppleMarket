@@ -13,6 +13,7 @@ import DetailIntroduce from "../../components/DetailIntroduce/DetailIntroduce";
 import ProductList from "../../components/ProductList/ProductList";
 import { Loading } from "../../components/Loading/Loading";
 import { addToCart } from "../../redux/action/action";
+import Livechat from "../../components/Livechat/Livechat";
 
 function DetailPage() {
     const dispatch = useDispatch()
@@ -80,6 +81,7 @@ function DetailPage() {
                         </div>
                     </div>
                     <Footer />
+                    <Livechat />
                 </div>
             </>
     );

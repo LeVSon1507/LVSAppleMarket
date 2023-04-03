@@ -24,3 +24,10 @@ li {
    font-style: italic;
    list-style-type: none;
 }
+
+@media screen and (max-width:768px) {
+   .footerWrap {
+      width: 100%;
+      margin: 0 auto;
+    }
+}

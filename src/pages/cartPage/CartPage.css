@@ -166,4 +166,43 @@ th{
 
 .iconTrash{
   color: #d3d3d3;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.noProduct{
+  font-size: 24px;
+  font-style: italic;
+  color: black;
+}
+@media screen and (max-width:768px) {
+  .cartPageContent{
+      width: 100%;
+      margin: 0;
+  }
+  .cartContainer{
+  }
+  .titleCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  th{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: x-small;
+    margin-left: 0.2rem;
+    padding-left: 0.2rem;
+  }
+  td{
+    margin-top: 0.5rem;
+    margin-left: 0.1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  
 }

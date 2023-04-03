@@ -50,24 +50,24 @@ function NavBar({ cartAdded }) {
    return (
       <div className='container-fluid navbarContainer'>
          <div className='row containerNav container'>
-            <div className='grLeft col-4'>
+            <div className='grLeft col-md-4 row'>
                <span
-                  className={`homeText mx-2 ${isActive('/') ? 'active' : ''}`}
+                  className={`homeText col-2 mx-2 ${isActive('/') ? 'active' : ''}`}
                   onClick={() => handleClickGoTo('/')}
                >
                   Home
                </span>
                <span
-                  className={`shopText mx-2 ${isActive('/shopPage') ? 'active' : ''}`}
+                  className={`shopText col-2 mx-2 ${isActive('/shopPage') ? 'active' : ''}`}
                   onClick={() => handleClickGoTo('/shopPage')}
                >
                   Shop
                </span>
             </div>
-            <h2 className='title col-4' onClick={() => handleClickGoTo('/')}>
+            <h2 className='title col-md-4' onClick={() => handleClickGoTo('/')}>
                BOUTIQUE
             </h2>
-            <div className='grRight col-4'>
+            <div className='grRight col-md-4'>
                <div className='cart' onClick={() => handleClickGoTo('/cartPage')}>
                   <FontAwesomeIcon icon={faCartShopping} className='icon' />
                   <span className='cartBtn'>Cart</span>
@@ -85,7 +85,7 @@ function NavBar({ cartAdded }) {
                      <div className='userName'>
                         <p className='userName'> I'm {currentUserName.fullName} </p>
                         <span className='cartBtn' onClick={handleLogout}>
-                           ( Logout )
+                           (Logout)
                         </span>
                      </div>
                   ) : (

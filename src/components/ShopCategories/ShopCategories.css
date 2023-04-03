@@ -57,3 +57,29 @@ border: #d3d3d3 1px solid;
 li {
    list-style-type: none;
 }
+
+@media screen and (max-width:768px) {
+   .headerProductCate{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0rem  1.5rem;
+   }
+   .searchProductIp{
+      width: 100%;
+   }
+   select{
+      border: 1px solid #d3d3d3;
+   }
+   .titleCate{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .container>li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}

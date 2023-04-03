@@ -110,3 +110,37 @@ body {
    font-style: italic; 
    padding-left: 2px;
 }
+
+
+@media screen and (max-width:768px) {
+   .checkOutPageContent {
+      width: 100%;
+      margin: 0 auto;
+   }
+  .checkOutPageContent> .bannerName{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+   }
+   .checkOutPageContent> .bannerName> .subtitleName{
+      width: 100%;
+   }
+   .checkOutPageContent> .bannerName> .titleName {
+    padding: 0 10px 0 0;
+   }
+   .checkOutPageContent> .bannerName> .checkOutPath {
+      padding:0 0 1rem 0;
+   }
+   .checkOutContainer{
+      padding: 1rem;
+   }
+   .titleCheckOut{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .checkoutIp{
+      border: #d3d3d3 1px solid;
+   }
+}

@@ -11,17 +11,22 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, updateQuantity } from '../../redux/action/action';
 import { useNavigate } from 'react-router-dom';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import Footer from '../../components/Footer/Footer';
 import NameBanner from '../../components/NameBanner/NameBanner';
 import NavBar from '../../components/NavBar/NavBar';
 import './CartPage.css';
+import Livechat from '../../components/Livechat/Livechat';
 
 function CartPage() {
    const navigate = useNavigate();
    const dataCart = useSelector(state => state.cartReducer.listCart);
+   const isShow = dataCart.length !== 0;
+   const currentUser = useSelector(state => state.authReducer.currentUser);
    const dispatch = useDispatch();
-
+   const isLogin = currentUser.password !== '' && currentUser.email !== '';
    const handleDeleteItem = productId => {
       dispatch(removeFromCart(productId));
    };
@@ -55,11 +60,34 @@ function CartPage() {
    };
 
    const goToCheckOut = () => {
-      navigate('../checkOut');
+      if (isLogin) {
+         navigate('../checkOut');
+      } else {
+         confirmAlert({
+            title: 'You are not logged in!',
+            message: 'Do you have account?',
+            buttons: [
+               {
+                  label: 'Login',
+                  onClick: () => {
+                     navigate('/loginPage');
+                  },
+               },
+               {
+                  label: 'Sign Up',
+                  onClick: () => {
+                     navigate('/signUpPage');
+                  },
+               },
+            ],
+         });
+      }
    };
 
    const renderCartTable = () => {
-      return (
+      return !isShow ? (
+         <div className='noProduct'>There are no products in the cart...</div>
+      ) : (
          <table>
             <thead className='container'>
                <tr className='theadtr'>
@@ -120,9 +148,11 @@ function CartPage() {
                <FontAwesomeIcon icon={faArrowLeft} className='iconArrowLeft' /> Continue shopping
             </div>
 
-            <div className='proceed' onClick={() => goToCheckOut()}>
-               Proceed to Checkout <FontAwesomeIcon icon={faArrowRight} className='iconArrow' />
-            </div>
+            {isShow && (
+               <div className='proceed' onClick={() => goToCheckOut()}>
+                  Proceed to Checkout <FontAwesomeIcon icon={faArrowRight} className='iconArrow' />
+               </div>
+            )}
          </div>
       );
    };
@@ -171,6 +201,7 @@ function CartPage() {
             </div>
          </div>
          <Footer />
+         <Livechat />
       </div>
    );
 }

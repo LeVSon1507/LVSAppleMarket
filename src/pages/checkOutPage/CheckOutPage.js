@@ -4,10 +4,13 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { resetCart } from "../../redux/action/action";
+import Livechat from "../../components/Livechat/Livechat";
 
 function CheckOutPage() {
     const navigate = useNavigate();
     const product = useSelector(state => state.cartReducer.listCart);
+
     const dispatch = useDispatch();
     const handleGoTo = (link) => {
         navigate(`../${link}`)
@@ -53,6 +56,8 @@ function CheckOutPage() {
         const isValid = Object.keys(validateInputs()).length === 0;
         if (isValid) {
             navigate('../');
+            alert('Order Success!!')
+            dispatch(resetCart())
         }
     };
 
@@ -154,7 +159,6 @@ function CheckOutPage() {
                         <div className='row'>
                             <div className='col-md-8 row'>
                                 {renderCheckOutTable()}
-                                <div className='container'>{ }</div>
                             </div>
                             <div className='col-md-4 container totalCheckout'>{renderCheckOutTotal()}</div>
                         </div>
@@ -162,6 +166,7 @@ function CheckOutPage() {
                 </div>
             </div>
             <Footer />
+            <Livechat />
         </div>
     );
 }

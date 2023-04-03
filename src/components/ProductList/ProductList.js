@@ -26,7 +26,7 @@ function ProductList({ category, isShopPage, searchValue }) {
     const ProductItem = ({ product }) => {
         return useMemo(() => (
             <div
-                className={`productItemContainer ${isShopPage ? 'col-md-4' : 'col-md-3'} col-6 my-4`}
+                className={`productItemContainer ${isShopPage ? 'col-md-4' : 'col-md-3'} col-12 my-4`}
                 key={`${product._id}+${product.name}`}
             >
                 <img src={product.img1} alt="productImg" className="productImg"

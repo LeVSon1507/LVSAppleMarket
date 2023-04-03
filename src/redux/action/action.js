@@ -40,3 +40,10 @@ export const updateCart = (cartList) => {
         payload: cartList
     }
 };
+
+export const resetCart = (cartList) => {
+    return {
+        type: 'RESET_CART',
+        payload: cartList
+    }
+};

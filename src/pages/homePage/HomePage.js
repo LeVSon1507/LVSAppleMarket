@@ -11,6 +11,7 @@ import ProductList from "../../components/ProductList/ProductList";
 
 
 import './HomePage.css'
+import Livechat from "../../components/Livechat/Livechat";
 
 function HomePage() {
     return (
@@ -21,6 +22,7 @@ function HomePage() {
                 <ListOfCategories />
                 <ProductList />
                 <OtherInfo />
+                <Livechat />
             </div>
             <Footer />
         </div>

@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div className="footerContainer container-fluid" >
             <div className="footerWrap row">
-                <div className="gr1 col-4">
+                <div className="gr1 col-md-4 col-6">
                     <ul>
                         <h5>CUSTOMER SERVICES</h5>
                         <li>Help a Contact Us</li>
@@ -14,7 +14,7 @@ function Footer() {
                         <li>Terms & Conditions</li>
                     </ul>
                 </div>
-                <div className="gr2 col-4">
+                <div className="gr2 col-md-4 col-6">
                     <ul>
                         <h5>COMPANY</h5>
                         <li>What We Do</li>
@@ -23,7 +23,7 @@ function Footer() {
                         <li>FAQs</li>
                     </ul>
                 </div>
-                <div className="gr3 col-4">
+                <div className="gr3 col-md-4 col-12">
                     <ul>
                         <h5>SOCIAL MEDIA</h5>
                         <li>Twitter</li>
