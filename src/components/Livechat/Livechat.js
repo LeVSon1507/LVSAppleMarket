@@ -7,15 +7,13 @@ function Livechat() {
     const [showPopup, setShowPopup] = useState(false);
 
     const togglePopup = () => {
+        const messIcon = document.getElementById('messenger-icon');
+        messIcon.classList.add('shake')
+        setTimeout(() => {
+            messIcon.classList.remove('shake')
+        }, 500);
         setShowPopup(!showPopup);
-        const popup = document.getElementById('chat-popup');
-        if (!showPopup) {
-            popup.classList.add('shake');
-        } else {
-            popup.classList.remove('shake');
-        }
     };
-
 
     return (
         <div>
