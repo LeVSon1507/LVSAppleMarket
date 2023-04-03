@@ -2,7 +2,7 @@
    "name": "assignment3",
    "version": "0.1.0",
    "private": true,
-   "stack": "heroku-22",
+   "homepage": "https://github.com/LeVSon1507/LVSAppleMarket",
    "dependencies": {
       "@fortawesome/fontawesome-svg-core": "^6.3.0",
       "@fortawesome/free-solid-svg-icons": "^6.3.0",
