@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { hidePopup } from '../../redux/action/action';
 import './Popup.css';
+import { hidePopup } from '../../redux/reducers/reducer';
 
 const Popup = () => {
     const navigate = useNavigate();

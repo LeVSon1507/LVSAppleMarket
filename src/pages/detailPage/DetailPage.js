@@ -12,8 +12,8 @@ import Footer from "../../components/Footer/Footer";
 import DetailIntroduce from "../../components/DetailIntroduce/DetailIntroduce";
 import ProductList from "../../components/ProductList/ProductList";
 import { Loading } from "../../components/Loading/Loading";
-import { addToCart } from "../../redux/action/action";
 import Livechat from "../../components/Livechat/Livechat";
+import { addToCart } from "../../redux/reducers/reducer";
 
 function DetailPage() {
     const dispatch = useDispatch()

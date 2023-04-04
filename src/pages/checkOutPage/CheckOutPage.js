@@ -4,8 +4,8 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { resetCart } from "../../redux/action/action";
 import Livechat from "../../components/Livechat/Livechat";
+import { resetCart } from "../../redux/reducers/reducer";
 
 function CheckOutPage() {
     const navigate = useNavigate();

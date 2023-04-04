@@ -10,7 +10,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faPerson } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { onLogout } from '../../redux/action/action';
+import { logout } from '../../redux/reducers/reducer';
 
 function NavBar({ cartAdded }) {
    const navigate = useNavigate();
@@ -31,7 +31,7 @@ function NavBar({ cartAdded }) {
                label: 'Yes',
                onClick: () => {
                   localStorage.removeItem('currentUser');
-                  dispatch(onLogout());
+                  dispatch(logout());
                   navigate('/');
                },
             },

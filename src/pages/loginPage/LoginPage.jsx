@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
-import { onLogin } from '../../redux/action/action';
 import './LoginPage.css';
 import Livechat from '../../components/Livechat/Livechat';
+import { login } from '../../redux/reducers/reducer';
 
 function LoginPage() {
    const dispatch = useDispatch();
@@ -27,7 +27,7 @@ function LoginPage() {
          if (matchedUser) {
             localStorage.setItem('currentUser', JSON.stringify(matchedUser));
             navigate('/');
-            dispatch(onLogin(user));
+            dispatch(login(user));
          } else {
             setErrors({ email: 'Email or password is incorrect' });
          }

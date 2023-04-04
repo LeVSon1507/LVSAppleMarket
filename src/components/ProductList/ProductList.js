@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 
-import { showPopup } from "../../redux/action/action";
 import Popup from "../Popup/Popup";
 import useFetch from "../../customHooks/useFetch";
 import { URL } from "../../URL";
@@ -9,6 +8,7 @@ import { URL } from "../../URL";
 import './ProductList.css';
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../Loading/Loading";
+import { showPopup } from "../../redux/reducers/reducer";
 
 
 function ProductList({ category, isShopPage, searchValue }) {

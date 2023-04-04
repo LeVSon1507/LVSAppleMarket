@@ -9,7 +9,6 @@ import {
    faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, updateQuantity } from '../../redux/action/action';
 import { useNavigate } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -19,6 +18,7 @@ import NameBanner from '../../components/NameBanner/NameBanner';
 import NavBar from '../../components/NavBar/NavBar';
 import './CartPage.css';
 import Livechat from '../../components/Livechat/Livechat';
+import { removeFromCart, updateQuantity } from '../../redux/reducers/reducer';
 
 function CartPage() {
    const navigate = useNavigate();
