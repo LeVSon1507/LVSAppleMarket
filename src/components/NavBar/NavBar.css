@@ -170,5 +170,6 @@
       width: 100%;
       align-items: center;
       display: flex;
+      font-style: italic;
    }
 }
