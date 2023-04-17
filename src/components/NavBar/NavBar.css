@@ -134,7 +134,12 @@
       padding: 0.5rem 1rem;
       margin: 0 0.2rem;
    }
-  
+   .cartBtn{
+      width: 100%;
+      align-items: center; 
+      display: flex;
+      font-style: italic;
+   }
    .cartProductQuantity {
       position: absolute;
       right: -5px;
@@ -168,7 +173,7 @@
    }
    .cartBtn{
       width: 100%;
-      align-items: center;
+      align-items: center; 
       display: flex;
       font-style: italic;
    }

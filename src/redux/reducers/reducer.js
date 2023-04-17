@@ -59,6 +59,7 @@ const cartSlice = createSlice({
         addToCart: (state, action) => {
             const { payload } = action;
             const productExists = state.listCart.some(item => item._id.$oid === payload._id.$oid);
+            //
             if (productExists) {
                 const cartList = state.listCart.map(item => {
                     if (item._id.$oid === payload._id.$oid) {
@@ -68,8 +69,9 @@ const cartSlice = createSlice({
                 });
                 state.listCart = cartList;
             } else {
-                const cartList = [...state.listCart, payload];
-                state.listCart = cartList;
+                // const cartList = [...state.listCart, payload];
+                // state.listCart = cartList;
+                state.listCart.push(payload);
             }
         },
         removeFromCart: (state, action) => {
